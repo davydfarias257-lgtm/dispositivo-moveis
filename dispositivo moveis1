@@ -1,0 +1,29 @@
+SELECT * FROM clientes;
+
+SELECT * FROM produtos;
+
+SELECT * FROM pedidos;
+
+SELECT * FROM itens_pedido;
+
+SELECT nome, email
+FROM clientes;
+
+SELECT nome_produto, preco
+FROM produtos;
+
+SELECT *
+FROM pedidos
+WHERE status_pedido = 'Entregue';
+
+SELECT *
+FROM produtos
+WHERE estoque > 50;
+
+SELECT pedido_id, quantidade, preco_unitario
+FROM itens_pedido;
+
+SELECT c.nome, p.status_pedido
+FROM clientes c
+JOIN pedidos p
+ON c.cliente_id = p.cliente_id;
